@@ -1,0 +1,22 @@
+.weather__slider-container {
+  width: 80%; /* Фиксированная ширина */
+  margin: auto; /* Центрируем */
+  overflow: hidden; /* Скрываем всё, что выходит за границы */
+  position: relative; /* Для позиционирования кнопок */
+}
+
+.weather__slider {
+  display: flex; /* Горизонтальное расположение слайдов */
+  flex-direction: row; /* Слайды идут слева направо */
+  transition: transform 0.5s ease; /* Плавное перемещение */
+}
+
+.slide {
+  min-width: 100%; /* Каждый слайд занимает всю ширину контейнера */
+  height: 90px; /* Фиксированная высота */
+  background: #f0f0f0; /* Для видимости */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Слайды не сжимаются */
+}
