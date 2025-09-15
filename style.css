@@ -147,7 +147,6 @@ body {
     Пригодится в большинстве ситуаций
     (когда, например, нужно будет "прижать" футер к низу сайта)
    */
-  min-height: 100%;
   /**
     Унифицированный интерлиньяж
    */
@@ -234,10 +233,26 @@ svg * {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
   margin: auto;
   border-radius: 1rem;
   box-shadow: rgb(49, 48, 48);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+.Header .btn__serch {
+  background-color: rgb(146, 165, 158);
+  border: 1px solid transparent;
+  /* Прозрачная граница 4px */
+  width: 40%;
+  height: 2rem;
+  text-align: center;
+  border-radius: 0 10rem 10rem 0;
+  padding: 0;
+}
+.Header .btn__serch:hover {
+  border: 1px dashed rgb(250, 250, 250);
+  /* Такая же толщина, только стиль и цвет меняются */
+  border-radius: 1rem;
 }
 .Header .header__logo {
   color: white;
@@ -251,51 +266,77 @@ svg * {
   display: flex;
   flex-direction: row;
 }
-.Header .Search--container__text .inp__serch {
+.Header .Search--container__textinput {
   background-color: rgb(64, 64, 64);
   width: 80%;
   border: none;
   border-radius: 1rem;
   height: 20px;
-  color: wheat;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.Header .Search--container__textinput:hover {
+  background-color: rgba(255, 255, 255, 0.057);
 }
 
 .weather__slider-container {
-  width: 80%; /* Фиксированная ширина */
-  margin: auto; /* Центрируем */
-  overflow: hidden; /* Скрываем всё, что выходит за границы */
-  position: relative; /* Для позиционирования кнопок */
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .weather__slider {
-  display: flex; /* Горизонтальное расположение слайдов */
-  flex-direction: row; /* Слайды идут слева направо */
-  transition: transform 0.5s ease; /* Плавное перемещение */
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
 }
 
 .slide {
-  min-width: 100%; /* Каждый слайд занимает всю ширину контейнера */
-  height: 90px; /* Фиксированная высота */
-  background: #f0f0f0; /* Для видимости */
-  display: flex;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.437);
+  min-width: 100%;
+  height: 150px;
+  background: #f0f0f0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0; /* Слайды не сжимаются */
+  padding: 0.5rem;
+  gap: 0.2rem;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-  justify-content: center;
-  align-content: center;
+.slide h3 {
+  grid-column: 1/2;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.weather__number-slider {
+  grid-column: 1/2;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.weather__titel-slider {
+  grid-column: 1/2;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.slide img {
+  grid-column: 2/3;
+  justify-self: center;
+  width: 80px;
+  height: 80px;
 }
 
 .main-container {
-  background-color: #a56363;
+  background-color: #5b8d5b;
   width: 80%;
+  margin-top: 0;
   margin: auto;
-  height: 30vw;
+  height: 40vw;
   align-items: start;
   justify-content: start;
   text-align: center;
@@ -308,4 +349,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-content: center;
 }/*# sourceMappingURL=style.css.map */

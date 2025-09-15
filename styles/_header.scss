@@ -1,4 +1,4 @@
-.Header{
+.Header {
     background-color: rgb(30, 30, 30);
     width: 90%;
     height: fit-content;
@@ -6,28 +6,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
     margin: auto;
     border-radius: 1rem;
-    box-shadow:rgb(49, 48, 48);
+    box-shadow: rgb(49, 48, 48);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    
-    & .header__logo{
+
+    & .btn__serch {
+        background-color: rgb(146, 165, 158);
+        border: 1px solid transparent;
+        /* Прозрачная граница 4px */
+        width: 40%;
+        height: 2rem;
+        text-align: center;
+        border-radius: 0 10rem 10rem 0;
+        padding: 0;
+
+        &:hover {
+            border: 1px dashed rgb(250, 250, 250);
+            /* Такая же толщина, только стиль и цвет меняются */
+            border-radius: 1rem;
+        }
+    }
+
+    & .header__logo {
         color: white;
         text-align: center;
     }
-    & .header__text{
+
+    & .header__text {
         margin-right: 20px;
         color: rgb(157, 146, 146);
     }
-    & .Search--container__text{
+
+    & .Search--container__text {
         display: flex;
         flex-direction: row;
-    & .inp__serch {
-        background-color: rgb(64, 64, 64);
-        width: 80%;
-        border: none;
-        border-radius: 1rem;
-        height: 20px;
-        color: wheat;
-    }}
+
+        &input {
+            background-color: rgb(64, 64, 64);
+            width: 80%;
+            border: none;
+            border-radius: 1rem;
+            height: 20px;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.057);
+            }
+        }
+    }
 }

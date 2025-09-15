@@ -89,10 +89,10 @@ const cities = ["New-York", "Moscow", "Monaco"]
 
 function loadWeather (city, index) {
 
-    const sliderTitel = document.querySelector(`[data-titel-slider=${index}]`)
-    const sliderIMG = document.querySelector(`[data-slider-img=${index}]`)
-    const sliderWeather = document.querySelector(`[data-slider-weather=${index}]`)
-    const sliderWeathertitel = document.querySelector(`[data-silder-titel=${index}]`)
+    const sliderTitel = document.querySelector(`[data-titel-slider="${index}"]`)
+    const sliderIMG = document.querySelector(`[data-slider-img="${index}"]`)
+    const sliderWeather = document.querySelector(`[data-slider-weather="${index}"]`)
+    const sliderWeathertitel = document.querySelector(`[data-silder-titel="${index}"]`)
 
 
 
@@ -103,7 +103,11 @@ function loadWeather (city, index) {
         }).then((data) => {
             console.log(data);
             
-            sliderTitel.textContent = `${data.location.name} ${index}`
+            sliderTitel.textContent = data.location.name
+            sliderWeather.textContent = `${Math.ceil(data.current.temp_c)} Cº`
+            sliderWeathertitel.textContent = data.current.condition.text
+            sliderIMG.src = data.current.condition.icon
+            sliderIMG.alt = 'ошибка'
         })
 }
 

@@ -1,0 +1,21 @@
+.main-container{
+    background-color: #5b8d5b;
+    width: 80%;
+    margin-top: 0;
+    margin: auto;
+    height: 40vw;
+    align-items: start;
+    justify-content: start;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+
+    & .card__main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+}
